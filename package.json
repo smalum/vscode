@@ -1,0 +1,95 @@
+{
+  "name": "smalum-vscode",
+  "displayName": "Smalum",
+  "description": "Превью диаграмм Smalum в Markdown (блоки sm / smalum) и файлов .sm.",
+  "version": "0.2.9",
+  "private": true,
+  "publisher": "smalum",
+  "license": "MIT",
+  "homepage": "https://smalum.ru",
+  "repository": {
+    "type": "git",
+    "url": "https://git.mtk.red/khramtsovsky/smalum.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "smalum",
+    "plantuml",
+    "mermaid",
+    "bpmn",
+    "dfd",
+    "c4",
+    "markdown"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown",
+    "onLanguage:smalum"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./preview.css"
+    ],
+    "markdown.previewScripts": [
+      "./out/preview.js"
+    ],
+    "languages": [
+      {
+        "id": "smalum",
+        "aliases": [
+          "Smalum",
+          "sm"
+        ],
+        "extensions": [
+          ".sm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "smalum.preview",
+        "title": "Smalum: Preview",
+        "icon": "$(open-preview)"
+      },
+      {
+        "command": "smalum.openInApp",
+        "title": "Smalum: Открыть в Smalum",
+        "icon": "$(link-external)"
+      },
+      {
+        "command": "smalum.copySource",
+        "title": "Smalum: Копировать исходник"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "smalum.preview",
+          "when": "resourceExtname == .sm || editorLangId == markdown || editorLangId == smalum",
+          "group": "navigation"
+        },
+        {
+          "command": "smalum.openInApp",
+          "when": "resourceExtname == .sm || editorLangId == markdown || editorLangId == smalum",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "package": "npm run build && npx --yes @vscode/vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.25.0"
+  }
+}

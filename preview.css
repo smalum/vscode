@@ -1,0 +1,105 @@
+/* Tokens follow Smalum canvas (light / dark) and VS Code high-contrast. */
+body {
+  --smalum-paper: #f8f9fa;
+  --smalum-node-bg: #fff;
+  --smalum-stroke: #2c3e50;
+  --smalum-text: #2c3e50;
+  --smalum-error-bg: #fef2f2;
+  --smalum-error-text: #991b1b;
+}
+body.vscode-dark {
+  --smalum-paper: #121820;
+  --smalum-node-bg: #1c2734;
+  --smalum-stroke: #c5d0da;
+  --smalum-text: #e8eef4;
+  --smalum-error-bg: #3a1c18;
+  --smalum-error-text: #ffc9c2;
+}
+body.vscode-high-contrast,
+body.vscode-high-contrast-light {
+  --smalum-paper: var(--vscode-editor-background);
+  --smalum-node-bg: var(--vscode-editor-background);
+  --smalum-stroke: var(--vscode-editor-foreground);
+  --smalum-text: var(--vscode-editor-foreground);
+  --smalum-error-bg: var(--vscode-inputValidation-errorBackground, #5a1d1d);
+  --smalum-error-text: var(--vscode-errorForeground, #f48771);
+}
+
+.smalum-fence {
+  margin: 1rem 0;
+  border: 1px solid var(--vscode-panel-border, #d1d5db);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--vscode-editorWidget-background, var(--smalum-paper));
+  color: var(--smalum-text);
+}
+.smalum-fence-bar {
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  background: #1a2b3c;
+}
+body.vscode-dark .smalum-fence-bar,
+body.vscode-high-contrast .smalum-fence-bar {
+  color: var(--vscode-foreground, #e8eef4);
+  background: var(--vscode-titleBar-activeBackground, #0f1923);
+}
+.smalum-fence-note {
+  margin: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--vscode-foreground, var(--smalum-text));
+}
+.smalum-fence-canvas {
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  background: var(--smalum-paper);
+}
+.smalum-fence-canvas > svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.smalum-fence-cta {
+  margin: 0 0.75rem 0.75rem;
+  font-size: 0.85rem;
+}
+.smalum-fence-cta a {
+  color: var(--vscode-textLink-foreground, #4a90d9);
+}
+.smalum-fence-cta a + a {
+  margin-left: 0.85rem;
+}
+.smalum-preview-page .smalum-fence-cta {
+  margin: 0.5rem 0.75rem 0.75rem;
+}
+
+.smalum-preview-page {
+  margin: 0;
+  padding: 16px;
+  font: 13px/1.4 ui-sans-serif, system-ui, sans-serif;
+  background: var(--smalum-paper);
+  color: var(--smalum-text);
+}
+.smalum-preview-page h1 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.smalum-preview-page .empty {
+  color: var(--smalum-stroke);
+  opacity: 0.8;
+}
+.smalum-preview-page .block {
+  margin-bottom: 24px;
+  overflow: auto;
+  border: 1px solid color-mix(in srgb, var(--smalum-stroke) 28%, transparent);
+  border-radius: 8px;
+  background: var(--smalum-node-bg);
+}
+.smalum-preview-page .block > svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

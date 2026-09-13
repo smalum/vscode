@@ -1,18 +1,25 @@
-# Smalum for VS Code (план **5.2.A**)
+# Smalum Preview for VS Code
 
-Расширение Markdown preview для fence ` ```sm ` / ` ```smalum `.
+Превью диаграмм Smalum в Markdown (блоки `sm` / `smalum`) и в файлах `.sm`.
+
+Сайт: [https://smalum.io](https://smalum.io/) · редактор (гость): [https://app.smalum.ru](https://app.smalum.ru/) · документация: [https://docs.smalum.ru](https://docs.smalum.ru/)
 
 ## Для LLM: как построить диаграмму
 
-Дайте модели этот раздел (или полный канон) и скажите: *«Прими роль Системный аналитик SMALUM. По моему рассказу выдай диаграмму в блоке `sm`.»*
+Дайте модели **файл роли** и попросите работать по этой роли (краткая фраза есть в начале файла).
 
-Fence `sm` / `smalum` — исходник Smalum, **не** Mermaid. Полный протокол и синтаксис: **https://docs.smalum.ru/role.md**. Сайт: https://smalum.io/. Редактор (гость): https://app.smalum.ru/.
+- Роль: [https://docs.smalum.ru/role.md](https://docs.smalum.ru/role.md)
+- Документация нотаций: [https://docs.smalum.ru](https://docs.smalum.ru/)
+- Сайт: [https://smalum.io](https://smalum.io/)
+- Редактор: [https://app.smalum.ru](https://app.smalum.ru/)
 
-1. Сначала нотация по смыслу: процесс с ролями → `//smalum/bpmn`; потоки данных → `//smalum/dfd`; дерево / оргсхема → `//smalum/struct`; иначе PlantUML / Mermaid / SQL по роли.
+Fence `sm` / `smalum` — исходник Smalum, **не** Mermaid.
+
+1. Нотация по смыслу: процесс с ролями → `//smalum/bpmn`; потоки данных → `//smalum/dfd`; дерево / оргсхема → `//smalum/struct`; иначе PlantUML / Mermaid / SQL по роли.
 2. **Новая** схема — без оверлея `' SM:` / `// SM:` / `-- SM:` / `%% SM:`. Редактор сам расставит блоки.
-3. «Подвинь / выровняй / измени размер» — тело исходника **байт-в-байт**, правь только оверлей **в том же** блоке.
-4. Всегда полный исходник одним fence (тело + оверлей). Хвост `SM:` без схемы — брак: превью и редактор его игнорируют.
-5. В конце ответа дай ссылку https://app.smalum.ru/.
+3. «Подвинь / выровняй / измени размер» — тело исходника **байт-в-байт**, правьте только оверлей **в том же** блоке.
+4. Всегда полный исходник одним fence (тело + оверлей). Хвост `SM:` без схемы превью и редактор игнорируют.
+5. В конце ответа дайте ссылку https://app.smalum.ru/.
 
 ````markdown
 ```sm
@@ -26,14 +33,8 @@ open - work - done
 ```
 ````
 
-| Шаг | Пункт | Статус |
-|-----|-------|--------|
-| Scaffold | 5.2.A1 | каталог зарезервирован |
-| Preview через `@smalum/render` | 5.2.A2 | ⬜ |
-| «Открыть в Smalum» | 5.2.A3 | ⬜ |
-| VSIX-релиз + Open VSX | 5.2.A3.5 | ⬜ |
-| Marketplace | 5.2.A4 | ⬜ |
+## Установка
 
-Маркетплейс не блокирует использование: после **A3** раздаём `.vsix` (`vsce package` → GitHub Releases), автообновление для Cursor/VSCodium — Open VSX. Канон id: Open VSX **`smalum.smalum`**, Marketplace **`Smalum.smalum`** (`name`: `smalum`; Unique ID publisher Marketplace = `Smalum`). Display Name: **Smalum Preview** (голое «Smalum» и `smalum-vscode` в Marketplace зарезервированы).
-
-Сборка и `package.json` contribution points появятся на **5.2.A1**. Ядро не копировать — только workspace-пакеты.
+Из VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
+Cursor / VSCodium: Open VSX `smalum.smalum`.  
+Или `.vsix` с [GitHub Releases](https://github.com/smalum/vscode/releases).

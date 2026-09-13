@@ -2,7 +2,7 @@
   "name": "smalum",
   "displayName": "Smalum Preview",
   "description": "Превью диаграмм Smalum в Markdown (блоки sm / smalum) и файлов .sm.",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",

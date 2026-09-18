@@ -1,6 +1,8 @@
 # Smalum Preview for VS Code
 
-Превью диаграмм Smalum в Markdown (блоки `sm` / `smalum`) и в файлах `.sm`.
+Превью диаграмм Smalum в Markdown (блоки `sm` / `smalum`), файлах `.sm` и PlantUML (`.puml` / `@startuml`).
+
+Для C4 из онлайн-редактора: вставьте исходник в `.puml` или `.sm` и откройте **Smalum: Preview** (не PlantUML Preview) — фигуры и цвета как в app.smalum.ru.
 
 Сайт: [https://smalum.io](https://smalum.io/) · редактор (гость): [https://app.smalum.ru](https://app.smalum.ru/) · документация: [https://docs.smalum.ru](https://docs.smalum.ru/)
 

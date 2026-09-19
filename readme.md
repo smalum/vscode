@@ -1,58 +1,63 @@
-# Smalum Preview for VS Code
+# Smalum
 
-Превью диаграмм Smalum в Markdown (блоки `sm` / `smalum`), файлах `.sm` и PlantUML (`.puml` / `@startuml`).
+**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Struct, SQL→ER — прямо в markdown.
 
-Для C4 из онлайн-редактора: вставьте исходник в `.puml` или `.sm` и откройте **Smalum: Preview** (не PlantUML Preview) — фигуры и цвета как в app.smalum.ru.
+## Боль
 
-Сайт: [https://smalum.io](https://smalum.io/) · редактор (гость): [https://app.smalum.ru](https://app.smalum.ru/) · документация: [https://docs.smalum.ru](https://docs.smalum.ru/)
+Схему пишут текстом: быстро, в git, рядом с кодом. Картинку автолейаут портит. Довели вид вручную — поправили строку исходника — раскладка сгорела.
 
-## Для LLM: как построить диаграмму
+Визуальный редактор сохраняет вид, но убивает «схему как код»: файл перестаёт быть источником правды.
 
-Дайте модели **файл роли** и попросите работать по этой роли (краткая фраза есть в начале файла).
+## Решение
 
-- Роль: [https://docs.smalum.ru/role.md](https://docs.smalum.ru/role.md)
-- Документация нотаций: [https://docs.smalum.ru](https://docs.smalum.ru/)
-- Сайт: [https://smalum.io](https://smalum.io/)
-- Редактор: [https://app.smalum.ru](https://app.smalum.ru/)
+Smalum: **текст = состав**, **мышь = вид**. Вид пишется обратно в тот же файл оверлеем `SM:` (координаты в комментариях). Следующий разбор берёт состав из кода, картинку — из оверлея.
 
-Fence `sm` / `smalum` — исходник Smalum, **не** Mermaid.
+Этот плагин — **read-only превью** того же разбора и того же оверлея, что в редакторе. Вставили блок исходника в `.md` — схема рисуется с вашей раскладкой. Любая поддерживаемая нотация из кода, не «одна картинка снаружи».
 
-1. Нотация по смыслу: процесс с ролями → `//smalum/bpmn`; потоки данных → `//smalum/dfd`; дерево / оргсхема → `//smalum/struct`; иначе PlantUML / Mermaid / SQL по роли.
-2. BPMN: внутри пула / между его дорожками — `-`; между **разными** пулами — `--`. Неверный `-`/`--` — ошибка (парсер не перепишет). Цели `xor` — до или после шлюза; join — явный или сахар `} join id` (не `} ->`).
-3. DFD: тип задают `(id)` / `[id]` или суффикс `id-[process]` / `id-[store]` (дальше в потоках — голый id). Компактный сахар без пробелов вокруг `-`: `A-[B] подпись`, `[B]-A ответ`, `A-(B) подпись`, `(B)-A ответ` — это **поток** (скобки = тип другого конца). Не путать с объявлением `user-[store]` без текста после `]`. Не писать слова `entity` / `process` / `datastore` в начале строки.
-4. **Новая** схема — без оверлея `' SM:` / `// SM:` / `-- SM:` / `%% SM:`. Редактор сам расставит блоки.
-5. «Подвинь / выровняй / измени размер» — тело исходника **байт-в-байт**, правьте только оверлей **в том же** блоке.
-6. Всегда полный исходник одним fence (тело + оверлей). Хвост `SM:` без схемы превью и редактор игнорируют.
-7. В конце ответа дайте ссылку https://app.smalum.ru/.
-
-````markdown
-```sm
-//smalum/bpmn Название процесса
-pool seller {
-  start open
-  task work user
-  end done
-}
-open - work - done
+```plantuml
+@startuml
+' SM: x=120 y=80 w=160 h=60
+participant "Клиент" as C
+' SM: x=420 y=80 w=160 h=60
+participant "Сервис" as S
+C -> S: запрос
+@enduml
 ```
-````
 
-````markdown
-```sm
-//smalum/dfd Отгрузка
-Клиент
-склад = Склад
-(оплата = Оплата)
+Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.ru](https://app.smalum.ru).
 
-Клиент-[склад] данные о грузе
-Клиент-(оплата) сумма
-checkout-[process] = Оформить
-Клиент - checkout Заказ
-```
-````
+## Умеет / не умеет
+
+| Умеет | Не умеет (намеренно) |
+|-------|----------------------|
+| Разбор PlantUML, Mermaid, DFD, BPMN, Struct, SQL→ER | Редактирование холста мышью |
+| Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
+| Превью в markdown / `.sm` без сети на `*.smalum.ru` | Запись оверлея из превью |
+
+Полноценный холст, облако и гостевой редактор — на [app.smalum.ru](https://app.smalum.ru). Плагин и сайт говорят на одном языке и одном оверлее.
+
+## Нотации
+
+| Нотация | Вход |
+|---------|------|
+| BPMN | `//smalum/bpmn` |
+| DFD | `//smalum/dfd` |
+| Struct | `//smalum/struct`, `struct/staff` |
+| PlantUML | `@startuml` |
+| Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
+| SQL→ER | `CREATE TABLE` |
 
 ## Установка
 
 Из VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
 Cursor / VSCodium: Open VSX `smalum.smalum`.  
 Или `.vsix` с [GitHub Releases](https://github.com/smalum/vscode/releases).
+
+## Ссылки
+
+- Сайт: [smalum.io](https://smalum.io)
+- Редактор: [app.smalum.ru](https://app.smalum.ru)
+- Документация: [docs.smalum.ru](https://docs.smalum.ru)
+- Файл роли для LLM: [docs.smalum.ru/role.md](https://docs.smalum.ru/role.md)
+
+**Small language. Sharp diagrams.**

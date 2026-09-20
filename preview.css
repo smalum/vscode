@@ -2,6 +2,7 @@
 body {
   --smalum-paper: #f8f9fa;
   --smalum-frame-fill: #f3f5f7;
+  --smalum-c4-frame-fill: #e8f3fa;
   --smalum-node-bg: #fff;
   --smalum-stroke: #2c3e50;
   --smalum-text: #2c3e50;
@@ -11,6 +12,7 @@ body {
 body.vscode-dark {
   --smalum-paper: #121820;
   --smalum-frame-fill: #1a2430;
+  --smalum-c4-frame-fill: #1a3040;
   --smalum-node-bg: #1c2734;
   --smalum-stroke: #c5d0da;
   --smalum-text: #e8eef4;
@@ -21,6 +23,7 @@ body.vscode-high-contrast,
 body.vscode-high-contrast-light {
   --smalum-paper: var(--vscode-editor-background);
   --smalum-frame-fill: var(--vscode-editor-background);
+  --smalum-c4-frame-fill: var(--vscode-editor-background);
   --smalum-node-bg: var(--vscode-editor-background);
   --smalum-stroke: var(--vscode-editor-foreground);
   --smalum-text: var(--vscode-editor-foreground);

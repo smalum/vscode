@@ -1,8 +1,8 @@
 {
   "name": "smalum",
   "displayName": "Smalum Preview",
-  "description": "Превью PlantUML, Mermaid, DFD и BPMN (C4, Struct, SQL→ER) в Markdown и файлах .sm / .puml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.28",
+  "description": "\u041f\u0440\u0435\u0432\u044c\u044e PlantUML, Mermaid, DFD \u0438 BPMN (C4, Struct, SQL\u2192ER) \u0432 Markdown \u0438 \u0444\u0430\u0439\u043b\u0430\u0445 .sm / .puml. \u0420\u0430\u0441\u043a\u043b\u0430\u0434\u043a\u0430 \u0441 \u043e\u0432\u0435\u0440\u043b\u0435\u0435\u043c \u2014 \u043a\u0430\u043a \u043d\u0430 smalum.io.",
+  "version": "0.2.29",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",
@@ -75,12 +75,12 @@
       },
       {
         "command": "smalum.openInApp",
-        "title": "Smalum: Открыть в Smalum",
+        "title": "Smalum: \u041e\u0442\u043a\u0440\u044b\u0442\u044c \u0432 Smalum",
         "icon": "$(link-external)"
       },
       {
         "command": "smalum.copySource",
-        "title": "Smalum: Копировать исходник"
+        "title": "Smalum: \u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0438\u0441\u0445\u043e\u0434\u043d\u0438\u043a"
       }
     ],
     "menus": {

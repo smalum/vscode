@@ -2,7 +2,7 @@
   "name": "smalum",
   "displayName": "Smalum Preview",
   "description": "Превью PlantUML, Mermaid, DFD и BPMN (C4, Struct, SQL→ER) в Markdown и файлах .sm / .puml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.27",
+  "version": "0.2.28",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",

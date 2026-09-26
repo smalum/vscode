@@ -24,7 +24,7 @@ C -> S: запрос
 @enduml
 ```
 
-Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.ru](https://app.smalum.ru).
+Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.ru](https://app.smalum.ru). **Smalum: Копировать SVG** / **Smalum: Экспорт SVG…** сохраняют самодостаточный SVG (обычные цвета светлой темы, открывается в любом просмотрщике).
 
 ## Умеет / не умеет
 
@@ -51,11 +51,11 @@ C -> S: запрос
 
 Из VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
 Cursor / VSCodium: Open VSX `smalum.smalum`.  
-Или `.vsix` с [GitHub Releases](https://github.com/smalum/vscode/releases).
+Или `.vsix` со страницы загрузок на [smalum.ru](https://smalum.ru).
 
 ## Ссылки
 
-- Сайт: [smalum.io](https://smalum.io)
+- Сайт: [smalum.ru](https://smalum.ru)
 - Редактор: [app.smalum.ru](https://app.smalum.ru)
 - Документация: [docs.smalum.ru](https://docs.smalum.ru)
 - Файл роли для LLM: [docs.smalum.ru/role.md](https://docs.smalum.ru/role.md)

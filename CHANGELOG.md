@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.33 — 2026-09-28
+
+- Превью и **Smalum: Копировать SVG** / **Экспорт SVG…** рисуют новую нотацию infra (бета) ([SM-992](https://redmine.q2t.ru/issues/992)): заголовок `//smalum/…/infra`, узлы `vm` / `server` / `node` / `switch` / `ws` / `camera` / `cloud` / `fw` / `bus` / `db` / `queue` / `cache` / `device` / `cluster` / `net`, зоны `Имя { … }` и `vlan N { … }`. Глифы в стиле Visio из каталога эталонных символов; шина `bus` — длина и ориентация из `SM:`-оверлея. Тот же `@smalum/render`, что у smalum-cli 1.1.1. SVG infra — корректный XML (без служебных атрибутов Visio `v:*` и дублей `id`). Нотация ещё не завершена: глифы и раскладка будут дорабатываться.
+- Сахар подписи связи ([ENH-1066](https://redmine.q2t.ru/issues/1066)): `id1-id2: text` принимается так же, как канон `id1-id2 text` (DFD/BPMN/Struct/Custom/Infra). Типичная ошибка LLM с двоеточием больше не ломает превью.
+
 ## 0.2.32 — 2026-09-26
 
 - Портативный оверлей [BUG-1037](https://redmine.q2t.ru/issues/1037): превью читает документную строку `SM: edges step|straight|bezier [jump|nojump]` и `via` на рёбрах — тот же тип линии и изгибы, что в редакторе после копирования исходника.

@@ -1,6 +1,6 @@
 # Smalum
 
-**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Struct, SQL→ER — прямо в markdown.
+**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Infra, Struct, SQL→ER — прямо в markdown.
 
 ## Боль
 
@@ -30,7 +30,7 @@ C -> S: запрос
 
 | Умеет | Не умеет (намеренно) |
 |-------|----------------------|
-| Разбор PlantUML, Mermaid, DFD, BPMN, Struct, SQL→ER | Редактирование холста мышью |
+| Разбор PlantUML, Mermaid, DFD, BPMN, Infra, Struct, SQL→ER | Редактирование холста мышью |
 | Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
 | Превью в markdown / `.sm` без сети на `*.smalum.ru` | Запись оверлея из превью |
 
@@ -43,6 +43,7 @@ C -> S: запрос
 | BPMN | `//smalum/bpmn` |
 | DFD | `//smalum/dfd` |
 | Struct | `//smalum/struct`, `struct/staff` |
+| Infra | `//smalum/infra`, `infra/flow`, `infra/l2`, `infra/l3` |
 | PlantUML | `@startuml` |
 | Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
 | SQL→ER | `CREATE TABLE` |

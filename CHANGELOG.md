@@ -1,9 +1,13 @@
 # Changelog
 
-## 0.2.33 — 2026-09-28
+## 0.2.34 — 2026-09-29
 
-- Превью и **Smalum: Копировать SVG** / **Экспорт SVG…** рисуют новую нотацию infra (бета) ([SM-992](https://redmine.q2t.ru/issues/992)): заголовок `//smalum/…/infra`, узлы `vm` / `server` / `node` / `switch` / `ws` / `camera` / `cloud` / `fw` / `bus` / `db` / `queue` / `cache` / `device` / `cluster` / `net`, зоны `Имя { … }` и `vlan N { … }`. Глифы в стиле Visio из каталога эталонных символов; шина `bus` — длина и ориентация из `SM:`-оверлея. Тот же `@smalum/render`, что у smalum-cli 1.1.1. SVG infra — корректный XML (без служебных атрибутов Visio `v:*` и дублей `id`). Нотация ещё не завершена: глифы и раскладка будут дорабатываться.
-- Сахар подписи связи ([ENH-1066](https://redmine.q2t.ru/issues/1066)): `id1-id2: text` принимается так же, как канон `id1-id2 text` (DFD/BPMN/Struct/Custom/Infra). Типичная ошибка LLM с двоеточием больше не ломает превью.
+- Infra: превью рисует многострочные подписи `<tspan>` и тот же SVG, что `smalum-cli` 1.1.3 ([BUG-1070](https://redmine.q2t.ru/issues/1070), [BUG-1067](https://redmine.q2t.ru/issues/1067)).
+
+## 0.2.33 — 2026-09-29
+
+- Infra: превью `.sm` и fence `sm` рисует весь каталог символов (кроме `unknown`) тем же SVG, что `smalum-cli` 1.1.2 ([SM-1088](https://redmine.q2t.ru/issues/1088)).
+- Сахар подписи связи ([ENH-1066](https://redmine.q2t.ru/issues/1066)): `id1-id2: text` принимается так же, как канон `id1-id2 text`.
 
 ## 0.2.32 — 2026-09-26
 

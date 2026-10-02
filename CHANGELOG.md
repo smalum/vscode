@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.35 — 2026-10-02
+
+- Infra: каталог Cisco Network Topology Icons, tight-crop и порты по внешнему контуру глифа — тот же SVG, что в редакторе ([SM-1101](https://redmine.q2t.ru/issues/1101), [BUG-1106](https://redmine.q2t.ru/issues/1106), [BUG-1109](https://redmine.q2t.ru/issues/1109)).
+- Связи infra: `--` пунктир, `->` сплошная стрелка, `-->` пунктирная стрелка; шина ethernet-bar ([BUG-1108](https://redmine.q2t.ru/issues/1108)).
+- Use case: человечек и эллипс в SVG-превью ([BUG-1103](https://redmine.q2t.ru/issues/1103)).
+- Оверлей `SM: unit grid` и `origin parent` читаются так же, как на холсте ([SM-986](https://redmine.q2t.ru/issues/986), [SM-987](https://redmine.q2t.ru/issues/987)).
+
 ## 0.2.34 — 2026-09-29
 
 - Infra: превью рисует многострочные подписи `<tspan>` и тот же SVG, что `smalum-cli` 1.1.3 ([BUG-1070](https://redmine.q2t.ru/issues/1070), [BUG-1067](https://redmine.q2t.ru/issues/1067)).

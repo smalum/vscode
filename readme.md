@@ -56,7 +56,7 @@ Cursor / VSCodium: Open VSX `smalum.smalum`.
 
 ## Корпус для ручной проверки
 
-Папка [`fixtures/kladovshchik/`](https://github.com/smalum/vscode/raw/main/fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
+Папка [`fixtures/kladovshchik/`](fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
 
 ## Ссылки
 

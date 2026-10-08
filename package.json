@@ -2,13 +2,13 @@
   "name": "smalum",
   "displayName": "Smalum Preview",
   "description": "Превью PlantUML, Mermaid, DFD, BPMN и Infra (C4, Struct, SQL→ER) в Markdown и файлах .sm / .puml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.35",
+  "version": "0.2.36",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",
-  "homepage": "https://smalum.ru",
+  "homepage": "https://smalum.io",
   "bugs": {
-    "url": "https://smalum.ru"
+    "url": "https://smalum.io"
   },
   "engines": {
     "vscode": "^1.85.0"

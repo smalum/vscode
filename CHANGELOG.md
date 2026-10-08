@@ -1,25 +1,35 @@
 # Changelog
 
+## 0.2.37 — 2026-10-07
+
+- BPMN: Camunda-глифы (круги start/end, ромбы XOR) снова инлайнятся в бандл на Windows — превью совпадает с холстом (BUG-1306).
+
+## 0.2.36 — 2026-10-05
+
+- «Открыть в Smalum»: после копирования исходника открывается `app.smalum.io/?paste=1`, приложение читает буфер и показывает ту же схему (BUG-1251).
+- Канон хостов: ссылки и CTA ведут на `*.smalum.io` (cutover с `.ru`).
+- SVG-превью: метаданные provenance в экспорте (SM-990); остаточные наложения подписей infra убраны (ENH-1265) — тот же смысл, что silent Apply в SPA.
+
 ## 0.2.35 — 2026-10-02
 
-- Infra: каталог Cisco Network Topology Icons, tight-crop и порты по внешнему контуру глифа — тот же SVG, что в редакторе ([SM-1101](https://redmine.q2t.ru/issues/1101), [BUG-1106](https://redmine.q2t.ru/issues/1106), [BUG-1109](https://redmine.q2t.ru/issues/1109)).
-- Связи infra: `--` пунктир, `->` сплошная стрелка, `-->` пунктирная стрелка; шина ethernet-bar ([BUG-1108](https://redmine.q2t.ru/issues/1108)).
-- Use case: человечек и эллипс в SVG-превью ([BUG-1103](https://redmine.q2t.ru/issues/1103)).
-- Оверлей `SM: unit grid` и `origin parent` читаются так же, как на холсте ([SM-986](https://redmine.q2t.ru/issues/986), [SM-987](https://redmine.q2t.ru/issues/987)).
+- Infra: каталог Cisco Network Topology Icons, tight-crop и порты по внешнему контуру глифа — тот же SVG, что в редакторе (SM-1101, BUG-1106, BUG-1109).
+- Связи infra: `--` пунктир, `->` сплошная стрелка, `-->` пунктирная стрелка; шина ethernet-bar (BUG-1108).
+- Use case: человечек и эллипс в SVG-превью (BUG-1103).
+- Оверлей `SM: unit grid` и `origin parent` читаются так же, как на холсте (SM-986, SM-987).
 
 ## 0.2.34 — 2026-09-29
 
-- Infra: превью рисует многострочные подписи `<tspan>` и тот же SVG, что `smalum-cli` 1.1.3 ([BUG-1070](https://redmine.q2t.ru/issues/1070), [BUG-1067](https://redmine.q2t.ru/issues/1067)).
+- Infra: превью рисует многострочные подписи `<tspan>` и тот же SVG, что `smalum-cli` 1.1.3 (BUG-1070, BUG-1067).
 
 ## 0.2.33 — 2026-09-29
 
-- Infra: превью `.sm` и fence `sm` рисует весь каталог символов (кроме `unknown`) тем же SVG, что `smalum-cli` 1.1.2 ([SM-1088](https://redmine.q2t.ru/issues/1088)).
-- Сахар подписи связи ([ENH-1066](https://redmine.q2t.ru/issues/1066)): `id1-id2: text` принимается так же, как канон `id1-id2 text`.
+- Infra: превью `.sm` и fence `sm` рисует весь каталог символов (кроме `unknown`) тем же SVG, что `smalum-cli` 1.1.2 (SM-1088).
+- Сахар подписи связи (ENH-1066): `id1-id2: text` принимается так же, как канон `id1-id2 text`.
 
 ## 0.2.32 — 2026-09-26
 
-- Портативный оверлей [BUG-1037](https://redmine.q2t.ru/issues/1037): превью читает документную строку `SM: edges step|straight|bezier [jump|nojump]` и `via` на рёбрах — тот же тип линии и изгибы, что в редакторе после копирования исходника.
-- Панель кода в приложении снова скрывает хвост `SM:` ([BUG-1036](https://redmine.q2t.ru/issues/1036)); в файл и в превью оверлей по-прежнему входит.
+- Портативный оверлей BUG-1037: превью читает документную строку `SM: edges step|straight|bezier [jump|nojump]` и `via` на рёбрах — тот же тип линии и изгибы, что в редакторе после копирования исходника.
+- Панель кода в приложении снова скрывает хвост `SM:` (BUG-1036); в файл и в превью оверлей по-прежнему входит.
 
 ## 0.2.31 — 2026-09-26
 

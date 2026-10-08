@@ -24,7 +24,7 @@ C -> S: запрос
 @enduml
 ```
 
-Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.ru](https://app.smalum.ru). **Smalum: Копировать SVG** / **Smalum: Экспорт SVG…** сохраняют самодостаточный SVG (обычные цвета светлой темы, открывается в любом просмотрщике).
+Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.io](https://app.smalum.io). **Smalum: Копировать SVG** / **Smalum: Экспорт SVG…** сохраняют самодостаточный SVG (обычные цвета светлой темы, открывается в любом просмотрщике).
 
 ## Умеет / не умеет
 
@@ -32,9 +32,9 @@ C -> S: запрос
 |-------|----------------------|
 | Разбор PlantUML, Mermaid, DFD, BPMN, Infra, Struct, SQL→ER | Редактирование холста мышью |
 | Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
-| Превью в markdown / `.sm` без сети на `*.smalum.ru` | Запись оверлея из превью |
+| Превью в markdown / `.sm` без сети к `*.smalum.io` | Запись оверлея из превью |
 
-Полноценный холст, облако и гостевой редактор — на [app.smalum.ru](https://app.smalum.ru). Плагин и сайт говорят на одном языке и одном оверлее.
+Полноценный холст, облако и гостевой редактор — на [app.smalum.io](https://app.smalum.io). Плагин и сайт говорят на одном языке и одном оверлее.
 
 ## Нотации
 
@@ -52,7 +52,7 @@ C -> S: запрос
 
 Из VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
 Cursor / VSCodium: Open VSX `smalum.smalum`.  
-Или `.vsix` со страницы загрузок на [smalum.ru](https://smalum.ru).
+Или `.vsix` со страницы загрузок на [smalum.io](https://smalum.io).
 
 ## Корпус для ручной проверки
 
@@ -60,9 +60,9 @@ Cursor / VSCodium: Open VSX `smalum.smalum`.
 
 ## Ссылки
 
-- Сайт: [smalum.ru](https://smalum.ru)
-- Редактор: [app.smalum.ru](https://app.smalum.ru)
-- Документация: [docs.smalum.ru](https://docs.smalum.ru)
-- Файл роли для LLM: [docs.smalum.ru/role.md](https://docs.smalum.ru/role.md)
+- Сайт: [smalum.io](https://smalum.io)
+- Редактор: [app.smalum.io](https://app.smalum.io)
+- Документация: [docs.smalum.io](https://docs.smalum.io)
+- Файл роли для LLM: [docs.smalum.io/role.md](https://docs.smalum.io/role.md)
 
 **Small language. Sharp diagrams.**

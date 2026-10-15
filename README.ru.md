@@ -1,0 +1,71 @@
+# Smalum
+
+> English: [README.md](./README.md)
+
+**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Infra, IDEF, Struct, SQL→ER — прямо в markdown.
+
+## Боль
+
+Схему пишут текстом: быстро, в git, рядом с кодом. Картинку автолейаут портит. Довели вид вручную — поправили строку исходника — раскладка сгорела.
+
+Визуальный редактор сохраняет вид, но убивает «схему как код»: файл перестаёт быть источником правды.
+
+## Решение
+
+Smalum: **текст = состав**, **мышь = вид**. Вид пишется обратно в тот же файл оверлеем `SM:` (координаты в комментариях). Следующий разбор берёт состав из кода, картинку — из оверлея.
+
+Этот плагин — **read-only превью** того же разбора и того же оверлея, что в редакторе. Вставили блок исходника в `.md` — схема рисуется с вашей раскладкой. Любая поддерживаемая нотация из кода, не «одна картинка снаружи».
+
+```plantuml
+@startuml
+' SM: x=120 y=80 w=160 h=60
+participant "Клиент" as C
+' SM: x=420 y=80 w=160 h=60
+participant "Сервис" as S
+C -> S: запрос
+@enduml
+```
+
+Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.io](https://app.smalum.io). **Smalum: Копировать SVG** / **Smalum: Экспорт SVG…** сохраняют самодостаточный SVG (обычные цвета светлой темы, открывается в любом просмотрщике).
+
+## Умеет / не умеет
+
+| Умеет | Не умеет (намеренно) |
+|-------|----------------------|
+| Разбор PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, Struct, SQL→ER | Редактирование холста мышью |
+| Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
+| Превью в markdown / `.sm` без сети к `*.smalum.io` | Запись оверлея из превью |
+
+Полноценный холст, облако и гостевой редактор — на [app.smalum.io](https://app.smalum.io). Плагин и сайт говорят на одном языке и одном оверлее.
+
+## Нотации
+
+| Нотация | Вход |
+|---------|------|
+| BPMN | `//smalum/bpmn` |
+| DFD | `//smalum/dfd` |
+| Struct | `//smalum/struct`, `struct/staff` |
+| Infra | `//smalum/infra`, `infra/flow`, `infra/l2`, `infra/l3` |
+| IDEF0 / IDEF1X / IDEF3 | `//smalum/idef0`, `idef1x`, `idef3/pfdd`, `idef3/ostn` |
+| PlantUML | `@startuml` |
+| Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
+| SQL→ER | `CREATE TABLE` |
+
+## Установка
+
+Из VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
+Cursor / VSCodium: Open VSX `smalum.smalum`.  
+Или `.vsix` со страницы загрузок на [smalum.io](https://smalum.io).
+
+## Корпус для ручной проверки
+
+Папка [`fixtures/kladovshchik/`](fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
+
+## Ссылки
+
+- Сайт: [smalum.io](https://smalum.io)
+- Редактор: [app.smalum.io](https://app.smalum.io)
+- Документация: [docs.smalum.io](https://docs.smalum.io)
+- Файл роли для LLM: [docs.smalum.io/role.md](https://docs.smalum.io/role.md)
+
+**Small language. Sharp diagrams.**

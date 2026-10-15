@@ -1,45 +1,47 @@
 # Smalum
 
-**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Infra, IDEF, Struct, SQL→ER — прямо в markdown.
+> Русская версия: [README.ru.md](./README.ru.md)
 
-## Боль
+**Diagram-as-code preview** — PlantUML, Mermaid, BPMN, DFD, Infra, IDEF, Struct, SQL→ER — right in markdown.
 
-Схему пишут текстом: быстро, в git, рядом с кодом. Картинку автолейаут портит. Довели вид вручную — поправили строку исходника — раскладка сгорела.
+## The problem
 
-Визуальный редактор сохраняет вид, но убивает «схему как код»: файл перестаёт быть источником правды.
+You write the diagram as text: fast, in git, next to the code. Auto-layout ruins the picture. You fix the layout by hand — then change one source line — and the layout is gone.
 
-## Решение
+A visual editor keeps the layout but kills “diagram as code”: the file stops being the source of truth.
 
-Smalum: **текст = состав**, **мышь = вид**. Вид пишется обратно в тот же файл оверлеем `SM:` (координаты в комментариях). Следующий разбор берёт состав из кода, картинку — из оверлея.
+## The solution
 
-Этот плагин — **read-only превью** того же разбора и того же оверлея, что в редакторе. Вставили блок исходника в `.md` — схема рисуется с вашей раскладкой. Любая поддерживаемая нотация из кода, не «одна картинка снаружи».
+Smalum: **text = structure**, **mouse = layout**. Layout is written back into the same file as an `SM:` overlay (coordinates in comments). The next parse takes structure from the code and the picture from the overlay.
+
+This extension is a **read-only preview** of the same parse and the same overlay as the editor. Drop a source fence into `.md` — the diagram renders with your layout. Any supported notation from code, not “one external image”.
 
 ```plantuml
 @startuml
 ' SM: x=120 y=80 w=160 h=60
-participant "Клиент" as C
+participant "Client" as C
 ' SM: x=420 y=80 w=160 h=60
-participant "Сервис" as S
-C -> S: запрос
+participant "Service" as S
+C -> S: request
 @enduml
 ```
 
-Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.io](https://app.smalum.io). **Smalum: Копировать SVG** / **Smalum: Экспорт SVG…** сохраняют самодостаточный SVG (обычные цвета светлой темы, открывается в любом просмотрщике).
+Also: `sm` / `smalum` fences in Markdown, `.sm` files and PlantUML (`.puml` / `@startuml`). **Smalum: Preview** — shapes and overlay as on [app.smalum.io](https://app.smalum.io). **Smalum: Copy SVG** / **Smalum: Export SVG…** write a self-contained SVG (plain light-theme colors, opens in any viewer).
 
-## Умеет / не умеет
+## Does / does not
 
-| Умеет | Не умеет (намеренно) |
-|-------|----------------------|
-| Разбор PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, Struct, SQL→ER | Редактирование холста мышью |
-| Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
-| Превью в markdown / `.sm` без сети к `*.smalum.io` | Запись оверлея из превью |
+| Does | Does not (on purpose) |
+|------|------------------------|
+| Parse PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, Struct, SQL→ER | Edit the canvas with the mouse |
+| Render with `SM:` / `%% SM:` overlay | Cloud, sharing, BPMN token simulator |
+| Preview in markdown / `.sm` with no network to `*.smalum.io` | Write overlay from the preview |
 
-Полноценный холст, облако и гостевой редактор — на [app.smalum.io](https://app.smalum.io). Плагин и сайт говорят на одном языке и одном оверлее.
+Full canvas, cloud, and guest editor live on [app.smalum.io](https://app.smalum.io). The extension and the site speak the same language and the same overlay.
 
-## Нотации
+## Notations
 
-| Нотация | Вход |
-|---------|------|
+| Notation | Input |
+|----------|-------|
 | BPMN | `//smalum/bpmn` |
 | DFD | `//smalum/dfd` |
 | Struct | `//smalum/struct`, `struct/staff` |
@@ -49,21 +51,21 @@ C -> S: запрос
 | Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
 | SQL→ER | `CREATE TABLE` |
 
-## Установка
+## Install
 
-Из VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
+From the VS Code / Cursor Marketplace: **Smalum Preview** (`Smalum.smalum`).  
 Cursor / VSCodium: Open VSX `smalum.smalum`.  
-Или `.vsix` со страницы загрузок на [smalum.io](https://smalum.io).
+Or a `.vsix` from the downloads page on [smalum.io](https://smalum.io).
 
-## Корпус для ручной проверки
+## Manual QA corpus
 
-Папка [`fixtures/kladovshchik/`](https://github.com/smalum/vscode/raw/main/fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
+[`fixtures/kladovshchik/`](fixtures/kladovshchik/) — Markdown describing the “Kladovshchik” system with fences for **all** supported notations (PlantUML, Mermaid in `sm`, BPMN/DFD/Infra/Struct, SQL→ER, `SM:` overlay). Open the file → **Markdown Preview** or **Smalum: Preview**.
 
-## Ссылки
+## Links
 
-- Сайт: [smalum.io](https://smalum.io)
-- Редактор: [app.smalum.io](https://app.smalum.io)
-- Документация: [docs.smalum.io](https://docs.smalum.io)
-- Файл роли для LLM: [docs.smalum.io/role.md](https://docs.smalum.io/role.md)
+- Site: [smalum.io](https://smalum.io)
+- Editor: [app.smalum.io](https://app.smalum.io)
+- Docs: [docs.smalum.io](https://docs.smalum.io)
+- LLM role file: [docs.smalum.io/role.md](https://docs.smalum.io/role.md)
 
 **Small language. Sharp diagrams.**

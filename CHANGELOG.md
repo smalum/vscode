@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 0.2.41 — 2026-10-15
+
+- Marketplace listing README is English; Russian text lives in `README.ru.md` (ENH-1637).
+
 ## 0.2.40 — 2026-10-14
 
 - IDEF0 / IDEF1X / IDEF3: превью `.sm` и fence `sm` рисует тот же SVG, что silent Apply в SPA и smalum-cli (`//smalum/idef0|idef1x|idef3[/pfdd|ostn]`).

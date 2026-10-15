@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 0.2.40 — 2026-10-14
+
+- IDEF0 / IDEF1X / IDEF3: превью `.sm` и fence `sm` рисует тот же SVG, что silent Apply в SPA и smalum-cli (`//smalum/idef0|idef1x|idef3[/pfdd|ostn]`).
+
 ## 0.2.39
 
 - Наконечники связей: геометрия из `@smalum/render` (ENH-1394) — тот же силуэт, что в SPA.

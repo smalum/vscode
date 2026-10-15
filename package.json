@@ -1,8 +1,8 @@
 {
   "name": "smalum",
   "displayName": "Smalum Preview",
-  "description": "Превью PlantUML, Mermaid, DFD, BPMN и Infra (C4, Struct, SQL→ER) в Markdown и файлах .sm / .puml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.39",
+  "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra и IDEF (C4, Struct, SQL→ER) в Markdown и файлах .sm / .puml. Раскладка с оверлеем — как на smalum.io.",
+  "version": "0.2.40",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",
@@ -24,6 +24,8 @@
     "bpmn",
     "dfd",
     "infra",
+    "idef",
+    "idef0",
     "c4",
     "markdown"
   ],

@@ -1,6 +1,6 @@
 # Smalum
 
-**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Infra, Struct, SQL→ER — прямо в markdown.
+**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Infra, IDEF, Struct, SQL→ER — прямо в markdown.
 
 ## Боль
 
@@ -30,7 +30,7 @@ C -> S: запрос
 
 | Умеет | Не умеет (намеренно) |
 |-------|----------------------|
-| Разбор PlantUML, Mermaid, DFD, BPMN, Infra, Struct, SQL→ER | Редактирование холста мышью |
+| Разбор PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, Struct, SQL→ER | Редактирование холста мышью |
 | Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
 | Превью в markdown / `.sm` без сети к `*.smalum.io` | Запись оверлея из превью |
 
@@ -44,6 +44,7 @@ C -> S: запрос
 | DFD | `//smalum/dfd` |
 | Struct | `//smalum/struct`, `struct/staff` |
 | Infra | `//smalum/infra`, `infra/flow`, `infra/l2`, `infra/l3` |
+| IDEF0 / IDEF1X / IDEF3 | `//smalum/idef0`, `idef1x`, `idef3/pfdd`, `idef3/ostn` |
 | PlantUML | `@startuml` |
 | Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
 | SQL→ER | `CREATE TABLE` |
@@ -56,7 +57,7 @@ Cursor / VSCodium: Open VSX `smalum.smalum`.
 
 ## Корпус для ручной проверки
 
-Папка [`fixtures/kladovshchik/`](fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
+Папка [`fixtures/kladovshchik/`](https://github.com/smalum/vscode/raw/main/fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
 
 ## Ссылки
 

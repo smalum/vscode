@@ -1,8 +1,8 @@
 {
   "name": "smalum",
   "displayName": "Smalum Preview",
-  "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra и IDEF (C4, Struct, SQL→ER) в Markdown и файлах .sm / .puml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.41",
+  "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, SQL→ER и docker-compose.yml (UML deployment) в Markdown и файлах .sm / .puml / .yml. Раскладка с оверлеем — как на smalum.io.",
+  "version": "0.2.43",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",
@@ -27,6 +27,7 @@
     "idef",
     "idef0",
     "c4",
+    "docker-compose",
     "markdown"
   ],
   "activationEvents": [
@@ -34,7 +35,9 @@
     "onLanguage:smalum",
     "onLanguage:plantuml",
     "onLanguage:puml",
-    "onLanguage:plantuml2"
+    "onLanguage:plantuml2",
+    "onLanguage:yaml",
+    "onLanguage:dockercompose"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -97,12 +100,12 @@
       "editor/title": [
         {
           "command": "smalum.preview",
-          "when": "resourceExtname == .sm || resourceExtname == .puml || resourceExtname == .plantuml || editorLangId == markdown || editorLangId == smalum || editorLangId == plantuml || editorLangId == puml",
+          "when": "resourceExtname == .sm || resourceExtname == .puml || resourceExtname == .plantuml || resourceExtname == .yml || resourceExtname == .yaml || editorLangId == markdown || editorLangId == smalum || editorLangId == plantuml || editorLangId == puml || editorLangId == yaml || editorLangId == dockercompose",
           "group": "navigation"
         },
         {
           "command": "smalum.openInApp",
-          "when": "resourceExtname == .sm || resourceExtname == .puml || resourceExtname == .plantuml || editorLangId == markdown || editorLangId == smalum || editorLangId == plantuml || editorLangId == puml",
+          "when": "resourceExtname == .sm || resourceExtname == .puml || resourceExtname == .plantuml || resourceExtname == .yml || resourceExtname == .yaml || editorLangId == markdown || editorLangId == smalum || editorLangId == plantuml || editorLangId == puml || editorLangId == yaml || editorLangId == dockercompose",
           "group": "navigation"
         }
       ]

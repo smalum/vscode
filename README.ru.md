@@ -2,7 +2,7 @@
 
 > English: [README.md](./README.md)
 
-**Превью диаграмм как код** — PlantUML, Mermaid, BPMN, DFD, Infra, IDEF, Struct, SQL→ER — прямо в markdown.
+**Превью диаграмм как код** — BPMN, DFD, DMN, Struct, Infra, IDEF0 / IDEF1X / IDEF3, семейство PlantUML, Mermaid, SQL→ER — прямо в markdown.
 
 ## Боль
 
@@ -32,7 +32,7 @@ C -> S: запрос
 
 | Умеет | Не умеет (намеренно) |
 |-------|----------------------|
-| Разбор PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, Struct, SQL→ER | Редактирование холста мышью |
+| Разбор BPMN, DFD, DMN, Struct, Infra, IDEF0 / IDEF1X / IDEF3, семейство PlantUML, Mermaid, SQL→ER | Редактирование холста мышью |
 | Отрисовка с оверлеем `SM:` / `%% SM:` | Облако, шаринг, симулятор BPMN |
 | Превью в markdown / `.sm` без сети к `*.smalum.io` | Запись оверлея из превью |
 
@@ -44,12 +44,14 @@ C -> S: запрос
 |---------|------|
 | BPMN | `//smalum/bpmn` |
 | DFD | `//smalum/dfd` |
+| DMN | `//smalum/dmn` |
 | Struct | `//smalum/struct`, `struct/staff` |
 | Infra | `//smalum/infra`, `infra/flow`, `infra/l2`, `infra/l3` |
 | IDEF0 / IDEF1X / IDEF3 | `//smalum/idef0`, `idef1x`, `idef3/pfdd`, `idef3/ostn` |
 | PlantUML | `@startuml` |
 | Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
 | SQL→ER | `CREATE TABLE` |
+| docker-compose → UML deployment | `docker-compose.yml` / `compose.yaml` (`services:` + `image`/`build`) |
 
 ## Установка
 

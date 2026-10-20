@@ -1,6 +1,14 @@
 # Changelog
 
 
+## 0.2.43 — 2026-10-19
+
+- `docker-compose.yml` / `.yaml`: Preview рисует **UML deployment** (artifact / database / node), не C4 Container (SM-1778). Тот же `@smalum/render`, что SPA и smalum-cli.
+
+## 0.2.42 — 2026-10-19
+
+- `docker-compose.yml` / `.yaml`: Preview и Copy/Export SVG рисуют C4 Container из YAML (тот же `@smalum/render`, что SPA и smalum-cli). Activation на `yaml` / `dockercompose` (SM-1765 / SM-1766).
+
 ## 0.2.41 — 2026-10-15
 
 - Marketplace listing README is English; Russian text lives in `README.ru.md` (ENH-1637).

@@ -2,7 +2,7 @@
 
 > Русская версия: [README.ru.md](./README.ru.md)
 
-**Diagram-as-code preview** — PlantUML, Mermaid, BPMN, DFD, Infra, IDEF, Struct, SQL→ER — right in markdown.
+**Diagram-as-code preview** — BPMN, DFD, DMN, Struct, Infra, IDEF0 / IDEF1X / IDEF3, PlantUML family, Mermaid, SQL→ER — right in markdown.
 
 ## The problem
 
@@ -32,7 +32,7 @@ Also: `sm` / `smalum` fences in Markdown, `.sm` files and PlantUML (`.puml` / `@
 
 | Does | Does not (on purpose) |
 |------|------------------------|
-| Parse PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, Struct, SQL→ER | Edit the canvas with the mouse |
+| Parse BPMN, DFD, DMN, Struct, Infra, IDEF0 / IDEF1X / IDEF3, PlantUML family, Mermaid, SQL→ER | Edit the canvas with the mouse |
 | Render with `SM:` / `%% SM:` overlay | Cloud, sharing, BPMN token simulator |
 | Preview in markdown / `.sm` with no network to `*.smalum.io` | Write overlay from the preview |
 
@@ -44,12 +44,14 @@ Full canvas, cloud, and guest editor live on [app.smalum.io](https://app.smalum.
 |----------|-------|
 | BPMN | `//smalum/bpmn` |
 | DFD | `//smalum/dfd` |
+| DMN | `//smalum/dmn` |
 | Struct | `//smalum/struct`, `struct/staff` |
 | Infra | `//smalum/infra`, `infra/flow`, `infra/l2`, `infra/l3` |
 | IDEF0 / IDEF1X / IDEF3 | `//smalum/idef0`, `idef1x`, `idef3/pfdd`, `idef3/ostn` |
 | PlantUML | `@startuml` |
 | Mermaid | `flowchart`, `sequenceDiagram`, … + `%% SM:` |
 | SQL→ER | `CREATE TABLE` |
+| docker-compose → UML deployment | `docker-compose.yml` / `compose.yaml` (`services:` + `image`/`build`) |
 
 ## Install
 

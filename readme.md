@@ -1,6 +1,6 @@
 # Smalum
 
-> Русская версия: [README.ru.md](./README.ru.md)
+> Русская версия: [README.ru.md](https://github.com/smalum/vscode/raw/main/README.ru.md)
 
 **Diagram-as-code preview** — BPMN, DFD, DMN, Struct, Infra, IDEF0 / IDEF1X / IDEF3, PlantUML family, Mermaid, SQL→ER — right in markdown.
 
@@ -61,7 +61,7 @@ Or a `.vsix` from the downloads page on [smalum.io](https://smalum.io).
 
 ## Manual QA corpus
 
-[`fixtures/kladovshchik/`](fixtures/kladovshchik/) — Markdown describing the “Kladovshchik” system with fences for **all** supported notations (PlantUML, Mermaid in `sm`, BPMN/DFD/Infra/Struct, SQL→ER, `SM:` overlay). Open the file → **Markdown Preview** or **Smalum: Preview**.
+[`fixtures/kladovshchik/`](https://github.com/smalum/vscode/raw/main/fixtures/kladovshchik/) — Markdown describing the “Kladovshchik” system with fences for **all** supported notations (PlantUML, Mermaid in `sm`, BPMN/DFD/Infra/Struct, SQL→ER, `SM:` overlay). Open the file → **Markdown Preview** or **Smalum: Preview**.
 
 ## Links
 

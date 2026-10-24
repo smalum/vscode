@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 0.2.44 — 2026-10-21
+
+- Mermaid: unsupported dialects (`erDiagram` / `gantt` / …) — explicit warning, not flowchart fallback; flowchart chaining / `&` fan-out; sequence `autonumber` / `par`/`and`; state concurrency / fork.
+- PlantUML sequence: `create` / `destroy`, visual `autonumber`, keyword `return`, `ref over`, separator `==` (same meaning as silent Apply in the SPA).
+
 ## 0.2.43 — 2026-10-19
 
 - `docker-compose.yml` / `.yaml`: Preview рисует **UML deployment** (artifact / database / node), не C4 Container (SM-1778). Тот же `@smalum/render`, что SPA и smalum-cli.

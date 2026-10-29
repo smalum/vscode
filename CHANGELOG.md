@@ -1,6 +1,14 @@
 # Changelog
 
 
+## 0.2.48 — 2026-10-29
+
+- Marketplace / Open VSX README: drop the internal Manual QA corpus (`fixtures/kladovshchik/`) section from the public listing (EN + RU).
+
+## 0.2.47 — 2026-10-29
+
+- Remove the separate «Копировать исходник» / `smalum.copySource` CTA — open already copies the source and opens `?paste=1` (ENH-2072).
+
 ## 0.2.46 — 2026-10-29
 
 - CTA «Move blocks on canvas →» / «Расставить блоки мышью →»: copies the diagram source and opens the app with `?paste=1` plus UTM (`utm_source=plugin`, `utm_medium=vscode`) so Matomo can attribute the visit.

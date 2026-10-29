@@ -2,7 +2,7 @@
   "name": "smalum",
   "displayName": "Smalum Preview",
   "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, SQL→ER и docker-compose.yml (UML deployment) в Markdown и файлах .sm / .puml / .yml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.46",
+  "version": "0.2.48",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",
@@ -90,10 +90,6 @@
       {
         "command": "smalum.exportSvg",
         "title": "Smalum: Экспорт SVG…"
-      },
-      {
-        "command": "smalum.copySource",
-        "title": "Smalum: Копировать исходник"
       }
     ],
     "menus": {

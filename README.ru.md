@@ -58,10 +58,6 @@ C -> S: запрос
 Cursor / VSCodium: Open VSX `smalum.smalum`.  
 Или `.vsix` со страницы загрузок на [smalum.io](https://smalum.io).
 
-## Корпус для ручной проверки
-
-Папка [`fixtures/kladovshchik/`](fixtures/kladovshchik/) — Markdown с описанием ИС «Кладовщик» и fence’ами **всех** поддерживаемых нотаций (PlantUML, Mermaid в `sm`, BPMN/DFD/Infra/Struct, SQL→ER, оверлей `SM:`). Откройте файл → **Markdown Preview** или **Smalum: Preview**.
-
 ## Ссылки
 
 - Сайт: [smalum.io](https://smalum.io)

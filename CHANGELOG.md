@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 0.2.46 — 2026-10-29
+
+- CTA «Move blocks on canvas →» / «Расставить блоки мышью →»: copies the diagram source and opens the app with `?paste=1` plus UTM (`utm_source=plugin`, `utm_medium=vscode`) so Matomo can attribute the visit.
+- Same paste + UTM path as the Obsidian adapter (guest editor stays on `/app` on combined hosts).
+
 ## 0.2.45 — 2026-10-29
 
 - Preview SVG: scrub before webview mount (same inert policy as SPA export) — no active markup (`script` / `on*` / `javascript:`) reaches the preview DOM.

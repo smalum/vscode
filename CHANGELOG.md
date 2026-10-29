@@ -1,6 +1,13 @@
 # Changelog
 
 
+## 0.2.45 — 2026-10-29
+
+- Preview SVG: scrub before webview mount (same inert policy as SPA export) — no active markup (`script` / `on*` / `javascript:`) reaches the preview DOM.
+- Sequence (PlantUML / Mermaid): phase dividers, message-label wrap, participant order, self-loops / arrows, delay styling — same `@smalum/render` as silent Apply in the SPA.
+- Edge labels: halo over connections (no opaque label box).
+- Product cut: DMN and custom notation packs removed from preview (same slice as the editor).
+
 ## 0.2.44 — 2026-10-21
 
 - Mermaid: unsupported dialects (`erDiagram` / `gantt` / …) — explicit warning, not flowchart fallback; flowchart chaining / `&` fan-out; sequence `autonumber` / `par`/`and`; state concurrency / fork.

@@ -1,7 +1,7 @@
 # Changelog
 
 
-## 0.2.48 — 2026-10-29
+## 0.2.49 — 2026-10-29
 
 - Marketplace / Open VSX README: drop the internal Manual QA corpus (`fixtures/kladovshchik/`) section from the public listing (EN + RU).
 

@@ -76,9 +76,6 @@ body.vscode-high-contrast .smalum-fence-bar {
 .smalum-fence-cta a {
   color: var(--vscode-textLink-foreground, #4a90d9);
 }
-.smalum-fence-cta a + a {
-  margin-left: 0.85rem;
-}
 .smalum-preview-page .smalum-fence-cta {
   margin: 0.5rem 0.75rem 0.75rem;
 }

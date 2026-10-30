@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 0.2.50 — 2026-10-31
+
+- Rebuild Preview so the dropped «Копировать исходник» CTA is gone from the shipped VSIX (only «Move blocks on canvas →» / «Расставить блоки мышью →» under the diagram). Build asserts the clear bundle has no `smalum-cta-copy` before obfuscation (BUG-2116 / ENH-2072).
+
 ## 0.2.49 — 2026-10-29
 
 - Marketplace / Open VSX README: drop the internal Manual QA corpus (`fixtures/kladovshchik/`) section from the public listing (EN + RU).

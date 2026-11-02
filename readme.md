@@ -66,3 +66,5 @@ Or a `.vsix` from the downloads page on [smalum.io](https://smalum.io).
 - LLM role file: [docs.smalum.io/role.md](https://docs.smalum.io/role.md)
 
 **Small language. Sharp diagrams.**
+
+Note: the Smalum web editor interface is in Russian; English UI is planned.

@@ -1,8 +1,8 @@
 {
   "name": "smalum",
   "displayName": "Smalum Preview",
-  "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, SQL→ER и docker-compose.yml (UML deployment) в Markdown и файлах .sm / .puml / .yml. Раскладка с оверлеем — как на smalum.io.",
-  "version": "0.2.50",
+  "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, SQL→ER и docker-compose.yml (UML deployment) в Markdown и файлах .sm / .puml / .yml. Раскладка с оверлеем — как на smalum.io. Обратите внимание: интерфейс веб-редактора Smalum на русском; английский — в планах.",
+  "version": "0.2.52",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",

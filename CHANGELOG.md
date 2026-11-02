@@ -1,6 +1,15 @@
 # Changelog
 
 
+## 0.2.52 — 2026-11-01
+
+- README and Marketplace / Open VSX description: note that the Smalum interface is Russian-only for now, English version planned (ENH-2153).
+
+## 0.2.51
+
+- Core: heal nested package overlay seats on apply (BUG-2121 class); activity/BPMN stack reorder seat sync (BUG-2120).
+- Includes 0.2.50: drop «Копировать исходник» under preview (BUG-2116).
+
 ## 0.2.50 — 2026-10-31
 
 - Rebuild Preview so the dropped «Копировать исходник» CTA is gone from the shipped VSIX (only «Move blocks on canvas →» / «Расставить блоки мышью →» under the diagram). Build asserts the clear bundle has no `smalum-cta-copy` before obfuscation (BUG-2116 / ENH-2072).

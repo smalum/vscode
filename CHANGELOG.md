@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.55 — 2026-11-09
+
+- Sequence `alt`/`loop` fragment frames are outline-only so lifelines stay visible under the box (BUG-2377); rebuild Preview against current `@smalum/render`.
+
 
 ## 0.2.54 — 2026-11-09
 

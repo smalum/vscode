@@ -1,6 +1,18 @@
 # Changelog
 
 
+## 0.2.54 — 2026-11-09
+
+- Setting `smalum.zone` (`auto` / `ru` / `io`): open the matching `app.smalum.*` host; `auto` picks by IDE language and falls back after a short health check when the preferred zone is blocked (ENH-2371).
+- CTA keeps a small «Open on smalum.ru / .io» link to the other zone (IDE vs browser proxy).
+- UTM: `utm_term=zone-ru|zone-io` for Matomo.
+- Rebuild Preview against current `@smalum/core` / `@smalum/render` edge routing (orthogonal corridor, bezier ends/normals, class height snap, pinned-via heal) so Scene matches SPA silent Apply / Ctrl+C full-diagram PNG (ENH-2374). No second edgePath in the host.
+- Changelog hygiene: `SM: edges … jump|nojump` was legacy wording (SM-1428); hops are ignored — only `step|sharp|straight|bezier` + `via` matter.
+
+## 0.2.53 — 2026-11-06
+
+- Remove **Smalum: Копировать SVG** and **Smalum: Экспорт SVG…**. Saving an SVG file stays in `smalum-cli` and MCP `export_svg` (ENH-2291). Preview is unchanged.
+
 ## 0.2.52 — 2026-11-01
 
 - README and Marketplace / Open VSX description: note that the Smalum interface is Russian-only for now, English version planned (ENH-2153).
@@ -95,7 +107,7 @@
 
 ## 0.2.32 — 2026-09-26
 
-- Портативный оверлей BUG-1037: превью читает документную строку `SM: edges step|straight|bezier [jump|nojump]` и `via` на рёбрах — тот же тип линии и изгибы, что в редакторе после копирования исходника.
+- Портативный оверлей BUG-1037: превью читает документную строку `SM: edges step|straight|bezier` (legacy `jump|nojump` ignored, SM-1428) и `via` на рёбрах — тот же тип линии и изгибы, что в редакторе после копирования исходника.
 - Панель кода в приложении снова скрывает хвост `SM:` (BUG-1036); в файл и в превью оверлей по-прежнему входит.
 
 ## 0.2.31 — 2026-09-26

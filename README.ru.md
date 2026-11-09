@@ -26,7 +26,7 @@ C -> S: запрос
 @enduml
 ```
 
-Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.io](https://app.smalum.io). **Smalum: Копировать SVG** / **Smalum: Экспорт SVG…** сохраняют самодостаточный SVG (обычные цвета светлой темы, открывается в любом просмотрщике).
+Также: fence `sm` / `smalum` в Markdown, файлы `.sm` и PlantUML (`.puml` / `@startuml`). Команда **Smalum: Preview** — фигуры и оверлей как в [app.smalum.io](https://app.smalum.io). Файл SVG — `smalum-cli` и MCP `export_svg`, не команда плагина.
 
 ## Умеет / не умеет
 

@@ -72,9 +72,17 @@ body.vscode-high-contrast .smalum-fence-bar {
 .smalum-fence-cta {
   margin: 0 0.75rem 0.75rem;
   font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.85rem;
 }
 .smalum-fence-cta a {
   color: var(--vscode-textLink-foreground, #4a90d9);
+}
+.smalum-fence-cta .smalum-cta-alt {
+  font-size: 0.78em;
+  opacity: 0.85;
 }
 .smalum-preview-page .smalum-fence-cta {
   margin: 0.5rem 0.75rem 0.75rem;

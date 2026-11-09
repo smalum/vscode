@@ -2,7 +2,7 @@
   "name": "smalum",
   "displayName": "Smalum Preview",
   "description": "Превью PlantUML, Mermaid, DFD, BPMN, Infra, IDEF, SQL→ER и docker-compose.yml (UML deployment) в Markdown и файлах .sm / .puml / .yml. Раскладка с оверлеем — как на smalum.io. Обратите внимание: интерфейс веб-редактора Smalum на русском; английский — в планах.",
-  "version": "0.2.52",
+  "version": "0.2.54",
   "private": true,
   "publisher": "smalum",
   "license": "MIT",
@@ -41,6 +41,21 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Smalum",
+      "properties": {
+        "smalum.zone": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "ru",
+            "io"
+          ],
+          "default": "auto",
+          "markdownDescription": "Which Smalum domain zone to open from the plugin (`app.smalum.ru` / `app.smalum.io`).\n\n- **auto** (default): prefer `.ru` when the IDE UI language is Russian, otherwise `.io`; before opening, the extension checks `GET /api/v1/health` (~2s) and falls back to the other zone if the preferred one is unreachable (useful when a corporate network blocks `.io`).\n- **ru** / **io**: always that zone, no health probes.\n\nПроверка доступности не передаёт данные пользователя и исходник."
+        }
+      }
+    },
     "markdown.markdownItPlugins": true,
     "markdown.previewStyles": [
       "./preview.css"
@@ -82,14 +97,6 @@
         "command": "smalum.openInApp",
         "title": "Smalum: Открыть в Smalum",
         "icon": "$(link-external)"
-      },
-      {
-        "command": "smalum.copySvg",
-        "title": "Smalum: Копировать SVG"
-      },
-      {
-        "command": "smalum.exportSvg",
-        "title": "Smalum: Экспорт SVG…"
       }
     ],
     "menus": {
@@ -109,6 +116,7 @@
   },
   "scripts": {
     "build": "node esbuild.mjs",
+    "build:dev": "node esbuild.mjs --dev",
     "package": "npm run build && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository --baseContentUrl https://github.com/smalum/vscode/raw/main/ --baseImagesUrl https://github.com/smalum/vscode/raw/main/"
   },
   "icon": "icon.png",

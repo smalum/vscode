@@ -26,7 +26,7 @@ C -> S: request
 @enduml
 ```
 
-Also: `sm` / `smalum` fences in Markdown, `.sm` files and PlantUML (`.puml` / `@startuml`). **Smalum: Preview** — shapes and overlay as on [app.smalum.io](https://app.smalum.io). **Smalum: Copy SVG** / **Smalum: Export SVG…** write a self-contained SVG (plain light-theme colors, opens in any viewer).
+Also: `sm` / `smalum` fences in Markdown, `.sm` files and PlantUML (`.puml` / `@startuml`). **Smalum: Preview** — shapes and overlay as on [app.smalum.io](https://app.smalum.io). An SVG file is written by `smalum-cli` and MCP `export_svg`, not by a plugin command.
 
 ## Does / does not
 

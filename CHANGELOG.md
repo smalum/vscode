@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.56 — 2026-11-11
+
+- PlantUML activity action corner radius matches SPA `.action` (`rx=18`); Mermaid flowchart `[…]` stays sharp (`rx=2`, BUG-418). Rebuild Preview against `@smalum/render` (BUG-2409).
+
 ## 0.2.55 — 2026-11-09
 
 - Sequence `alt`/`loop` fragment frames are outline-only so lifelines stay visible under the box (BUG-2377); rebuild Preview against current `@smalum/render`.

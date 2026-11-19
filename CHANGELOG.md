@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+## 0.2.57 — 2026-11-19
+
+- Show a parser-diagnostics counter in Markdown and standalone Preview headers; expand it for severity, line, short message and a Smalum documentation link (ENH-2591 / ENH-2592).
+
 ## 0.2.56 — 2026-11-11
 
 - PlantUML activity action corner radius matches SPA `.action` (`rx=18`); Mermaid flowchart `[…]` stays sharp (`rx=2`, BUG-418). Rebuild Preview against `@smalum/render` (BUG-2409).

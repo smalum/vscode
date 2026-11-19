@@ -4,6 +4,8 @@ body {
   --smalum-frame-fill: #f3f5f7;
   --smalum-c4-frame-fill: #e8f3fa;
   --smalum-node-bg: #fff;
+  --smalum-node-cube-top: #f1f3f5;
+  --smalum-node-cube-side: #e4e8ec;
   --smalum-stroke: #2c3e50;
   --smalum-infra-edge: #5a6570;
   --smalum-text: #2c3e50;
@@ -15,6 +17,8 @@ body.vscode-dark {
   --smalum-frame-fill: #1a2430;
   --smalum-c4-frame-fill: #1a3040;
   --smalum-node-bg: #1c2734;
+  --smalum-node-cube-top: #192430;
+  --smalum-node-cube-side: #141c26;
   --smalum-stroke: #c5d0da;
   --smalum-infra-edge: #a8b4c0;
   --smalum-text: #e8eef4;
@@ -27,6 +31,8 @@ body.vscode-high-contrast-light {
   --smalum-frame-fill: var(--vscode-editor-background);
   --smalum-c4-frame-fill: var(--vscode-editor-background);
   --smalum-node-bg: var(--vscode-editor-background);
+  --smalum-node-cube-top: var(--vscode-editor-background);
+  --smalum-node-cube-side: var(--vscode-editor-background);
   --smalum-stroke: var(--vscode-editor-foreground);
   --smalum-text: var(--vscode-editor-foreground);
   --smalum-error-bg: var(--vscode-inputValidation-errorBackground, #5a1d1d);
@@ -37,21 +43,116 @@ body.vscode-high-contrast-light {
   margin: 1rem 0;
   border: 1px solid var(--vscode-panel-border, #d1d5db);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   background: var(--vscode-editorWidget-background, var(--smalum-paper));
   color: var(--smalum-text);
 }
-.smalum-fence-bar {
+.smalum-fence-bar,
+.smalum-block-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 28px;
   padding: 0.4rem 0.75rem;
   font-weight: 700;
   font-size: 0.85rem;
   color: #fff;
   background: #1a2b3c;
+  border-radius: 7px 7px 0 0;
 }
 body.vscode-dark .smalum-fence-bar,
-body.vscode-high-contrast .smalum-fence-bar {
+body.vscode-high-contrast .smalum-fence-bar,
+body.vscode-dark .smalum-block-bar,
+body.vscode-high-contrast .smalum-block-bar {
   color: var(--vscode-foreground, #e8eef4);
   background: var(--vscode-titleBar-activeBackground, #0f1923);
+}
+.smalum-diagnostics {
+  position: relative;
+  font-weight: 400;
+}
+.smalum-diagnostics > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 28px;
+  min-height: 24px;
+  justify-content: center;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 4px;
+  color: #f0a030;
+}
+.smalum-diagnostics.is-error > summary {
+  color: var(--vscode-errorForeground, #f48771);
+}
+.smalum-diagnostics > summary::-webkit-details-marker {
+  display: none;
+}
+.smalum-diagnostics > summary:hover,
+.smalum-diagnostics[open] > summary {
+  background: var(--vscode-toolbar-hoverBackground, rgb(255 255 255 / 12%));
+}
+.smalum-diagnostics-icon {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.smalum-diagnostics-count {
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.smalum-diagnostics-popover {
+  position: absolute;
+  z-index: 1000;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 360px;
+  max-width: calc(100vw - 48px);
+  max-height: 360px;
+  overflow: auto;
+  padding: 0.75rem;
+  border: 1px solid var(--vscode-panel-border, #d1d5db);
+  border-radius: 6px;
+  background: var(--vscode-editorWidget-background, var(--smalum-node-bg));
+  box-shadow: 0 6px 20px rgb(0 0 0 / 25%);
+  color: var(--vscode-foreground, var(--smalum-text));
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.smalum-diagnostics-title {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.smalum-diagnostics-popover ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.smalum-diagnostic {
+  padding: 0.65rem 0 0;
+  margin-top: 0.65rem;
+  border-top: 1px solid var(--vscode-panel-border, #d1d5db);
+}
+.smalum-diagnostic-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  align-items: center;
+  color: var(--vscode-descriptionForeground, #6b7280);
+  font-size: 0.78rem;
+}
+.smalum-diagnostic.is-error .smalum-diagnostic-meta > span:first-child {
+  color: var(--vscode-errorForeground, #f48771);
+}
+.smalum-diagnostic p {
+  margin: 0.3rem 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.smalum-diagnostic a {
+  color: var(--vscode-textLink-foreground, #4a90d9);
 }
 .smalum-fence-note {
   margin: 0.75rem;
@@ -105,8 +206,9 @@ body.vscode-high-contrast .smalum-fence-bar {
   opacity: 0.8;
 }
 .smalum-preview-page .block {
+  position: relative;
   margin-bottom: 24px;
-  overflow: auto;
+  overflow: visible;
   border: 1px solid color-mix(in srgb, var(--smalum-stroke) 28%, transparent);
   border-radius: 8px;
   background: var(--smalum-node-bg);

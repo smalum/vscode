@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.2.58 — 2026-11-19
+
+- Preview CTA is only «Move blocks on canvas →» / «Расставить блоки мышью →» — drop the secondary «Open on smalum.ru / .io» zone link (ENH-2630). Zone still comes from `smalum.zone` + health on open.
+
 ## 0.2.57 — 2026-11-19
 
 - Show a parser-diagnostics counter in Markdown and standalone Preview headers; expand it for severity, line, short message and a Smalum documentation link (ENH-2591 / ENH-2592).

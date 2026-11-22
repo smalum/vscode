@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.2.59 — 2026-11-22
+
+- Rebuild Preview against current `@smalum/render`: тёмная тема красит куб UML deployment node (BUG-2512); новый знак Sm+булавка в ассетах (ENH-2632).
+
 ## 0.2.58 — 2026-11-19
 
 - Preview CTA is only «Move blocks on canvas →» / «Расставить блоки мышью →» — drop the secondary «Open on smalum.ru / .io» zone link (ENH-2630). Zone still comes from `smalum.zone` + health on open.

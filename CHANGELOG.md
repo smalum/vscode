@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+## 0.2.61 — 2026-11-26
+
+- New extension icon: brand tile with the «hare» mark (SM-2900 / ENH-2899).
+- Keep one «Move blocks on canvas →» CTA: built-in Markdown Preview uses a direct `https:` link because it blocks extension `command:` links; standalone Preview still resolves `smalum.zone` through the extension command. The static alternate-zone link stays removed.
+- Rebuild Preview against current `@smalum/core` + `@smalum/render`:
+  - BPMN input synonym `nonstop` for start events (ENH-2873).
+  - BPMN gateway sugar: `if` declarations (ENH-2877).
+  - BPMN context editing and canvas modes; sequence-flow links preserved on edit (ENH-2882 / BUG-2885).
+  - BPMN structural canvas patcher over the full dialect (ENH-2890).
+  - Preserve current canvas geometry, edge routes and labels in SPA, catalog and MCP PNG exports (BUG-2894).
+  - BPMN single lane dividers, event/gateway edge contacts, four N/E/S/W ports, and multiline synchronized pool/lane title bands (BUG-2916 / BUG-2917 / BUG-2918 / BUG-2920).
+
+## 0.2.60 — 2026-11-24
+
+- Rebuild Preview against current `@smalum/render`: folded-document Note (ENH-2863); Mermaid component group layout and captions (BUG-2858 / BUG-2859); BPMN event labels stay inside pools and lanes (ENH-2813).
+- C4 ports and label regressions (BUG-2848 / BUG-2849 / BUG-2850), Infra cloud outline in dark theme (BUG-2856), consistent SM overlay coordinates and captions (BUG-2864).
+
 ## 0.2.59 — 2026-11-22
 
 - Rebuild Preview against current `@smalum/render`: тёмная тема красит куб UML deployment node (BUG-2512); новый знак Sm+булавка в ассетах (ENH-2632).
